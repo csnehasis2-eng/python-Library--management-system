@@ -1,0 +1,21 @@
+{
+    "book": [
+        {
+            "id": "B-21O0X",
+            "title": "GOT",
+            "author": "Snehasis",
+            "copies": 3,
+            "avaivale_copies": 3,
+            "added_on": "2026-11-07 21:44:14"
+        },
+        {
+            "id": "B-5PCNX",
+            "title": "dd",
+            "author": "dd",
+            "copies": 3,
+            "avaivale_copies": 3,
+            "added_on": "2026-11-07 21:45:35"
+        }
+    ],
+    "member": []
+}
