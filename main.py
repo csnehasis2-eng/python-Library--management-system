@@ -44,7 +44,13 @@ class Library:
         }
         Library.data['book'].append(books)
         Library.save_data()
-
+    def list_books(self):
+        if not Library.data["book"]:
+            print("sorry no books found")
+            return# return means function will stop here 
+        for b in Library.data["book"]:
+            print(f"{b['id']:12}{b['title'][:24]:25}{b["author"][:19]:20}{b['copies']}/{b["avaivale_copies"]:>3}")
+        print()
 hello=Library()
 
 print("="*50)
@@ -61,3 +67,5 @@ print("-"*50)
 choice=input("What task you want to do?")
 if choice=="1":
     hello.add_books()
+if choice=="2":
+    hello.list_books()
