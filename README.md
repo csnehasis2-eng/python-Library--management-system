@@ -1,83 +1,146 @@
-# 📚 Python Library Management System
+# 📚 Library Management System
 
-A simple Library Management System built using Python and Object-Oriented Programming (OOP). This project is currently under development.
+A console-based **Library Management System** built with Python and Object-Oriented Programming (OOP). This project helps manage books, members, and borrowing/returning operations with persistent data storage using JSON.
 
-## 🚀 Technologies Used
+The system is designed to demonstrate practical Python concepts through a simple, structured, and interactive application.
 
-- Python
-- JSON
-- Object-Oriented Programming (OOP)
-- pathlib
-- random
-- string
-- datetime
+## ✨ Features
 
-## ✨ Implemented Features
+### 📖 Book Management
+- Add new books to the library.
+- Automatically generate unique Book IDs.
+- Store book details such as title, author, and total copies.
+- Display all available book records.
+- Track total and available copies.
 
-- [x] Add new books
-- [x] Automatically generate unique Book IDs
-- [x] Store book title and author details
-- [x] Store total and available copies
-- [x] Record book addition date and time
-- [x] List all available books
-- [x] Display book information in formatted columns
-- [x] JSON-based data storage
-- [x] Load existing data from JSON file
-- [x] Save book data persistently
-- [x] Add new library members
-- [x] Automatically generate unique Member IDs
-- [x] Store member name and email
-- [x] List registered members
-- [x] Borrow books using Member ID and Book ID
-- [x] Record borrowed book title, ID and borrowing date
-- [x] Automatically decrease available book copies after borrowing
+### 👤 Member Management
+- Register new library members.
+- Automatically generate unique Member IDs.
+- Store member details such as name and email.
+- Display registered members and their borrowed books.
 
-## 📋 Upcoming Features
+### 🔄 Borrow & Return System
+- Borrow books using Member ID and Book ID.
+- Check book availability before borrowing.
+- Automatically decrease available copies when a book is borrowed.
+- Return previously borrowed books.
+- Automatically increase available copies after returning a book.
 
-- [ ] Return Books
-- [ ] Track complete borrowing and return history
-- [ ] Prevent duplicate borrowing
-- [ ] Input validation and exception handling
-- [ ] Improve book and member management
+### 💾 Data Persistence
+- Store all library records in a JSON file.
+- Preserve books and member information between program executions.
+- Automatically save changes after operations.
 
-## 📁 Project Structure
+## 🛠️ Technologies & Concepts Used
+
+| Technology | Purpose |
+|---|---|
+| Python | Core programming language |
+| OOP | Class and object-based structure |
+| JSON | Data storage |
+| `json` | Reading and writing JSON data |
+| `random` | Generating random IDs |
+| `string` | Uppercase letters and digits |
+| `pathlib` | File and path handling |
+| `datetime` | Recording timestamps |
+
+## 📂 Project Structure
 
 ```text
-Library Management/
+Library-Management-System/
 │
-├── main.py
-├── library.json
-└── README.md
+├── main.py          # Main application
+├── library.json     # Library database
+└── README.md        # Project documentation
 ```
 
-## ▶️ How to Run
+## 🚀 Getting Started
 
-1. Clone this repository:
+### 1. Clone the Repository
 
 ```bash
-git clone https://github.com/csnehasis2-eng/python-Library--management-system.git
+git clone https://github.com/YOUR-USERNAME/Library-Management-System.git
 ```
 
-2. Navigate to the project folder:
+### 2. Navigate to the Project Directory
 
 ```bash
-cd python-Library--management-system
+cd Library-Management-System
 ```
 
-3. Run the Python file:
+### 3. Run the Application
 
 ```bash
 python main.py
 ```
 
-## 📌 Project Status
+**Requirements:** Python 3.x
 
-**Work in Progress 🚧**
+No external Python packages are required.
 
-This project is being developed step by step to practice Python OOP, file handling, JSON data storage, and real-world programming concepts.
+## 🖥️ Application Menu
 
-More features and improvements will be added as development continues.
+```text
+==================================================
+          Library Management System
+==================================================
+
+1. Add Book
+2. List Book
+3. Add Member
+4. List Member
+5. Borrow Book
+6. Return Book
+0. Exit the Portal
+
+--------------------------------------------------
+What task you want to do?
+```
+
+## 📊 How It Works
+
+The application follows a simple workflow:
+
+1. **Add Books:** Register books with automatically generated IDs.
+2. **Register Members:** Create member records with unique IDs.
+3. **Borrow Books:** Members borrow books using their IDs.
+4. **Return Books:** Returned books are added back to the available inventory.
+5. **Save Data:** All modifications are stored in `library.json`.
+
+## 🎯 Learning Objectives
+
+This project helped me practice:
+
+- Python Object-Oriented Programming.
+- Classes, objects, and class methods.
+- Lists and dictionaries.
+- List comprehension.
+- File handling and JSON serialization.
+- Exception handling.
+- Random ID generation.
+- Date and time handling.
+- Working with persistent data.
+
+## 🔮 Future Improvements
+
+Potential improvements for future versions:
+
+- Search books by title, author, or ID.
+- Delete and update book records.
+- Member-wise borrowing history.
+- Due dates and fine calculation.
+- Input validation and duplicate prevention.
+- Graphical User Interface (GUI).
+- Database integration using SQLite.
+
+## 👨‍💻 Author
+
+**Snehasis Chakraborty**
+
+B.Tech CSE Student | Python & Programming Enthusiast
+
+- GitHub: [@csnehasis2-eng](https://github.com/csnehasis2-eng)
 
 ---
 
-**Developed by:** Snehasis Chakraborty
+⭐ If you find this project interesting, feel free to explore the repository!
