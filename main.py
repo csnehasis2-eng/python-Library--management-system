@@ -93,7 +93,7 @@ class Library:
             return
         borrow_entry={
             "title":book['title'],
-             "id ":book['id'],
+             "id":book['id'],
              "borrowed-on":datetime.now().strftime("%Y-%m-%d %H:%M:%S")
         
 
@@ -101,6 +101,30 @@ class Library:
         member['borrowed'].append(borrow_entry)
         book['avaivale_copies']-=1
         Library.save_data()
+    def return_book(self):
+            member_id = input("enter the member id")
+            memberss = [m for m in Library.data['member'] if m['id'] == member_id]
+            if not memberss:
+                print("sorry no such member found")
+                return
+            member=memberss[0]
+            if not member['borrowed']:
+                print("No borrowed books")
+                return
+            print("Borrowed books")
+            for i,b in enumerate(member['borrowed'],start=1):
+                print(f"{i}.{b['title']}({b['id']})")
+            try:
+                choice=int(input("enter no to return - "))
+                select=member['borrowed'].pop(choice-1)
+            except Exception as err:
+                print("invalid value")  
+            books=[bk for bk in Library.data['book'] if bk['id']==select['id']] 
+            if books:
+                books[0]['avaivale_copies']+=1
+            Library.save_data()
+
+        
            
 
 
@@ -128,3 +152,7 @@ if choice=="4":
     hello.list_members()
 if choice=="5":
     hello.borrow_book()
+if choice=="6":
+    hello.return_book()
+if choice=="0":
+    exit(0)

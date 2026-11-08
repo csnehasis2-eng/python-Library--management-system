@@ -5,7 +5,7 @@
             "title": "GOT",
             "author": "Snehasis",
             "copies": 3,
-            "avaivale_copies": 3,
+            "avaivale_copies": 4,
             "added_on": "2026-11-07 21:44:14"
         },
         {
@@ -22,13 +22,7 @@
             "id": "M-T7G1S",
             "name": "Snehasis",
             "email": "csnehasis@gmail.com",
-            "borrowed": [
-                {
-                    "title": "GOT",
-                    "id ": "B-21O0X",
-                    "borrowed-on": "2026-11-08 12:58:46"
-                }
-            ],
+            "borrowed": [],
             "added_on": "2026-11-07 23:40:54"
         },
         {
