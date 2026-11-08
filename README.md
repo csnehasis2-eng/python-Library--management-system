@@ -24,15 +24,21 @@ A simple Library Management System built using Python and Object-Oriented Progra
 - [x] JSON-based data storage
 - [x] Load existing data from JSON file
 - [x] Save book data persistently
+- [x] Add new library members
+- [x] Automatically generate unique Member IDs
+- [x] Store member name and email
+- [x] List registered members
+- [x] Borrow books using Member ID and Book ID
+- [x] Record borrowed book title, ID and borrowing date
+- [x] Automatically decrease available book copies after borrowing
 
 ## 📋 Upcoming Features
 
-- [ ] Add Member
-- [ ] List Members
-- [ ] Borrow Books
 - [ ] Return Books
-- [ ] Track borrowing history
+- [ ] Track complete borrowing and return history
+- [ ] Prevent duplicate borrowing
 - [ ] Input validation and exception handling
+- [ ] Improve book and member management
 
 ## 📁 Project Structure
 

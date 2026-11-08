@@ -51,6 +51,59 @@ class Library:
         for b in Library.data["book"]:
             print(f"{b['id']:12}{b['title'][:24]:25}{b["author"][:19]:20}{b['copies']}/{b["avaivale_copies"]:>3}")
         print()
+    def add_members(self):
+        name=input("enter  name: ")
+        email=input("enter  email: ")
+        borrowed=[]
+
+        members = {
+            "id": Library.gen_id("M"),
+            "name": name,
+            "email": email,
+            "borrowed":[],
+          
+            "added_on": datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        }
+        Library.data['member'].append(members)
+        Library.save_data()
+    def list_members(self):
+        if not Library.data["member"]:
+            print("sorry no member found")
+            return# return means function will stop here 
+        for m in Library.data["member"]:
+            print(f"{m['id']:12}{m['name'][:24]:25}{m["email"][:19]:20}:>3")
+        print(f"This guy has currently{m["borrowed"]}")
+        print()
+    def borrow_book(self):
+        member_id = input("enter the member id")
+        memberss = [m for m in Library.data['member'] if m['id'] == member_id]
+        if not memberss:
+            print("sorry no such member found")
+            return
+        member=memberss[0]
+    
+        book_id = input("enter the book id")
+        bookss = [b for b in Library.data['book'] if b['id'] == book_id]
+        if not bookss:
+            print("sorry no such book found")
+            return
+        book=bookss[0]
+        if  book['avaivale_copies']<=0:
+            print("sorry no books available")
+            return
+        borrow_entry={
+            "title":book['title'],
+             "id ":book['id'],
+             "borrowed-on":datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        
+
+        }
+        member['borrowed'].append(borrow_entry)
+        book['avaivale_copies']-=1
+        Library.save_data()
+           
+
+
 hello=Library()
 
 print("="*50)
@@ -69,3 +122,9 @@ if choice=="1":
     hello.add_books()
 if choice=="2":
     hello.list_books()
+if choice=="3":
+    hello.add_members()
+if choice=="4":
+    hello.list_members()
+if choice=="5":
+    hello.borrow_book()

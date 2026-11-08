@@ -17,5 +17,26 @@
             "added_on": "2026-11-07 21:45:35"
         }
     ],
-    "member": []
+    "member": [
+        {
+            "id": "M-T7G1S",
+            "name": "Snehasis",
+            "email": "csnehasis@gmail.com",
+            "borrowed": [
+                {
+                    "title": "GOT",
+                    "id ": "B-21O0X",
+                    "borrowed-on": "2026-11-08 12:58:46"
+                }
+            ],
+            "added_on": "2026-11-07 23:40:54"
+        },
+        {
+            "id": "M-2Q2OI",
+            "name": "python -u \"c:\\Users\\Snehasis Chakraborty\\Desktop\\library management\\main.py\"",
+            "email": "hgfhjsdgasghd@",
+            "borrowed": [],
+            "added_on": "2026-11-07 23:42:22"
+        }
+    ]
 }
